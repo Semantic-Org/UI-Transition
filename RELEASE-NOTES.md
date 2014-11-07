@@ -1,5 +1,6 @@
 ### Version 1.0.0 - XX XX, 2014
 
+- **Transition** - Complete, and Start callbacks are now ``onComplete`` and ``onStart``
 - **Transition** - Transition will now keep block position of elements hidden with visibility hidden
 - **Transition** - Transitions now will handle multiple display types more consistently
 - **Transition** - Transition now has a new ``start`` callback, before animation starts
