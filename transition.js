@@ -179,15 +179,25 @@ $.fn.transition = function() {
             if( module.is.outward() ) {
               module.verbose('Animation is outward, hiding element');
               module.restore.conditions();
+<<<<<<< HEAD
               module.hide();
               module.remove.display();
+=======
+              module.remove.display();
+              module.hide();
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
               $.proxy(settings.onHide, this)();
             }
             else if( module.is.inward() ) {
               module.verbose('Animation is outward, showing element');
               module.restore.conditions();
+<<<<<<< HEAD
               module.show();
               module.set.display();
+=======
+              module.set.display();
+              module.show();
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
               $.proxy(settings.onShow, this)();
             }
             else {
@@ -196,7 +206,11 @@ $.fn.transition = function() {
             module.remove.duration();
             module.remove.animating();
           }
+<<<<<<< HEAD
           $.proxy(settings.onComplete, this)();
+=======
+          $.proxy(settings.complete, this)();
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
         },
 
         has: {
@@ -230,16 +244,27 @@ $.fn.transition = function() {
               .one(animationEnd + '.complete' + eventNamespace, module.complete)
             ;
             module.set.duration(settings.duration);
+<<<<<<< HEAD
             $.proxy(settings.onStart, this)();
+=======
+            $.proxy(settings.start, this)();
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
             module.debug('Starting tween', animation, $module.attr('class'));
           },
           display: function() {
             var
+<<<<<<< HEAD
               style              = module.get.style(),
               displayType        = module.get.displayType(),
               overrideStyle      = style + 'display: ' + displayType + ' !important;'
             ;
             module.refresh();
+=======
+              style         = module.get.style(),
+              displayType   = module.get.displayType(),
+              overrideStyle = style + 'display: ' + displayType + ' !important;'
+            ;
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
             if( $module.css('display') !== displayType ) {
               module.verbose('Setting inline visibility to', displayType);
               $module
@@ -310,7 +335,11 @@ $.fn.transition = function() {
 
         save: {
           displayType: function(displayType) {
+<<<<<<< HEAD
             $module.data(metadata.displayType, displayType);
+=======
+            module.displayType = displayType;
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
           },
           transitionExists: function(animation, exists) {
             $.fn.transition.exists[animation] = exists;
@@ -358,7 +387,13 @@ $.fn.transition = function() {
             $module.removeClass(className.animating);
           },
           display: function() {
+<<<<<<< HEAD
             $module.css('display', '');
+=======
+            if(module.displayType !== undefined) {
+              $module.css('display', '');
+            }
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
           },
           direction: function() {
             $module
@@ -398,17 +433,29 @@ $.fn.transition = function() {
           }
         },
         get: {
+<<<<<<< HEAD
           settings: function(animation, duration, onComplete) {
+=======
+          settings: function(animation, duration, complete) {
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
             // single settings object
             if(typeof animation == 'object') {
               return $.extend(true, {}, $.fn.transition.settings, animation);
             }
             // all arguments provided
+<<<<<<< HEAD
             else if(typeof onComplete == 'function') {
               return $.extend({}, $.fn.transition.settings, {
                 animation  : animation,
                 onComplete : onComplete,
                 duration   : duration
+=======
+            else if(typeof complete == 'function') {
+              return $.extend({}, $.fn.transition.settings, {
+                animation : animation,
+                complete  : complete,
+                duration  : duration
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
               });
             }
             // only duration provided
@@ -427,8 +474,13 @@ $.fn.transition = function() {
             // duration is actually callback
             else if(typeof duration == 'function') {
               return $.extend({}, $.fn.transition.settings, {
+<<<<<<< HEAD
                 animation  : animation,
                 onComplete : duration
+=======
+                animation : animation,
+                complete  : duration
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
               });
             }
             // only animation provided
@@ -440,11 +492,19 @@ $.fn.transition = function() {
             return $.fn.transition.settings;
           },
           displayType: function() {
+<<<<<<< HEAD
             if($module.data(metadata.displayType) === undefined) {
               // create fake element to determine display state
               module.can.transition(true);
             }
             return $module.data(metadata.displayType);
+=======
+            if(module.displayType === undefined) {
+              // create fake element to determine display state
+              module.can.transition();
+            }
+            return module.displayType;
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
           },
           style: function() {
             var
@@ -505,6 +565,7 @@ $.fn.transition = function() {
               return false;
             }
           },
+<<<<<<< HEAD
           transition: function(forced) {
             var
               elementClass      = $module.attr('class'),
@@ -518,6 +579,20 @@ $.fn.transition = function() {
               displayType
             ;
             if( transitionExists === undefined || forced) {
+=======
+          transition: function() {
+            var
+              elementClass     = $module.attr('class'),
+              tagName          = $module.prop('tagName'),
+              animation        = settings.animation,
+              transitionExists = module.get.transitionExists(settings.animation),
+              $clone,
+              currentAnimation,
+              inAnimation,
+              displayType
+            ;
+            if( transitionExists === undefined || module.displayType === undefined) {
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
               module.verbose('Determining whether animation exists');
               $clone = $('<' + tagName + ' />').addClass( elementClass ).insertAfter($module);
               currentAnimation = $clone
@@ -542,19 +617,34 @@ $.fn.transition = function() {
               module.verbose('Determining final display state', displayType);
               if(currentAnimation != inAnimation) {
                 module.debug('Transition exists for animation', animation);
+<<<<<<< HEAD
                 animationExists = true;
               }
               else {
                 module.debug('Static animation found', animation, displayType);
                 animationExists = false;
+=======
+                transitionExists = true;
+              }
+              else {
+                module.debug('Static animation found', animation, displayType);
+                transitionExists = false;
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
               }
               $clone.remove();
               module.save.displayType(displayType);
               if(transitionExists === undefined) {
+<<<<<<< HEAD
                 module.save.transitionExists(animation, animationExists);
               }
             }
             return transitionExists || animationExists;
+=======
+                module.save.transitionExists(animation, transitionExists);
+              }
+            }
+            return transitionExists;
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
           }
         },
 
@@ -808,8 +898,13 @@ $.fn.transition.settings = {
   namespace   : 'transition',
 
   // animation complete event
+<<<<<<< HEAD
   onStart     : function() {},
   onComplete  : function() {},
+=======
+  start       : function() {},
+  complete    : function() {},
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
   onShow      : function() {},
   onHide      : function() {},
 
@@ -823,10 +918,13 @@ $.fn.transition.settings = {
   // new animations will occur after previous ones
   queue       : true,
 
+<<<<<<< HEAD
   metadata : {
     displayType: 'display'
   },
 
+=======
+>>>>>>> cd7f0199f48419729929c894bd649039230729f4
   className   : {
     animating  : 'animating',
     disabled   : 'disabled',
