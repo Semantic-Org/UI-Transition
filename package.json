@@ -1,10 +1,6 @@
 {
   "name": "semantic-ui-transition",
-<<<<<<< HEAD
   "version": "1.0.0-beta",
-=======
-  "version": "1.0.0",
->>>>>>> cd7f0199f48419729929c894bd649039230729f4
   "title": "Semantic UI - Transition",
   "description": "Single component release of transition",
   "homepage": "http://www.semantic-ui.com",
@@ -17,16 +13,9 @@
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"
   },
-<<<<<<< HEAD
   "devDependencies": {},
   "dependencies": {
     "jquery": "x.x.x"
   },
-=======
-  "dependencies": {
-    "jquery": "x.x.x"
-  },
-  "devDependencies": {},
->>>>>>> cd7f0199f48419729929c894bd649039230729f4
   "main": "index.js"
 }
