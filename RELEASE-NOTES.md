@@ -7,6 +7,22 @@
 - **Transition** - Complete callback now does not occur if animation is interrupted before completing
 - **Transition** - You can now specify the final displayType of a transitioning element in metadata or settings (not just automatically detected)
 
+### Version 0.19.0 - July 3, 2014
+
+- **Transition** - Adds "fade in left/right" variations to match "fade up/down" **Thanks AdamMaras**
+
+### Version 0.16.1 - April 22, 2014
+
+- **Transition** - Fixes bug where transition could accidentally hide element on show due to error when determining original display type
+
+### Version 0.16.0 - April 22, 2014
+
+- **Transition** - Fixes issue where transition hidden was sometimes overwriten by UI styles causing the element to stay visible
+
+### Version 0.15.3 - April 04, 2014
+
+- **Transition** - CSS Transitions now work in legacy FF (FF > 12)
+
 ### Version 0.15.0 - Mar 14, 2014
 
 - **Modal** - Modal onShow and onHide occurs before transition starts, allowing for class name changes not to be reset
