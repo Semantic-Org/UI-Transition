@@ -1,4 +1,4 @@
-### Version 1.0.0 - XX XX, 2014
+### Version 1.0.0 - November 24, 2014
 
 - **Transition** - Complete, and Start callbacks are now ``onComplete`` and ``onStart``
 - **Transition** - Transition will now keep block position of elements hidden with visibility hidden
