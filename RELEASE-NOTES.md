@@ -1,3 +1,14 @@
+### Version 1.1.0 - December 02, 2014
+
+- **Transition** - Transition's caching of final display state and animation existence now has improved performance.
+- **Transition** now has ``useFailSafe`` parameter (off by default) to ensure transition callback fires even if native ``onAnimationEnd`` event does not fire due to element visibility. [Chromium Bug Report by Product Manager @ Mozilla](https://code.google.com/p/chromium/issues/detail?id=135350#c2) and [this open issue](https://code.google.com/p/chromium/issues/detail?id=437860)
+- **Transition** - Transition now correctly detects missing animations, errors do not cause future image transitions to break
+
+### Version 1.0.1 - November 28, 2014
+
+- **Transition** - Fix vertical flip not working due to css typo **Thanks cgroner**
+- **Table** - Fixes table cell transition animating all properties
+
 ### Version 1.0.0 - November 24, 2014
 
 - **Transition** - Complete, and Start callbacks are now ``onComplete`` and ``onStart``
