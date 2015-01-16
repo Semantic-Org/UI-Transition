@@ -1,3 +1,15 @@
+### Version 1.7.0 - January 14, 2015
+
+- **Dropdown** - New `upward dropdown` variation, which opens its menu upward. Default animation now uses ``settings.transition = 'auto'` and determines direction of animation based on menu direction
+
+### Version 1.6.1 - January 05, 2015
+
+- **Accordion** - Accordion now uses ``useFailSafe: true`` to avoid callbacks not occurring because of race conditions with `transitionend` in webkit
+
+### Version 1.6.0 - January 05, 2015
+
+- **Accordion** - Child element animations now use ``$.fn.transition`` and css animations by default (if available)
+
 ### Version 1.1.0 - December 02, 2014
 
 - **Transition** - Transition's caching of final display state and animation existence now has improved performance.
