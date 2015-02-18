@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### UI Changes
 
 - **Transition** - Fixes bug where `moduleNamespace` was being omitted
@@ -16,6 +17,10 @@
 
 ### Version 1.7.0 - January 14, 2015
 
+=======
+### Version 1.7.0 - January 14, 2015
+
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
 - **Dropdown** - New `upward dropdown` variation, which opens its menu upward. Default animation now uses ``settings.transition = 'auto'` and determines direction of animation based on menu direction
 
 ### Version 1.6.1 - January 05, 2015

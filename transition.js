@@ -69,7 +69,15 @@ $.fn.transition = function() {
           error           = settings.error;
           metadata        = settings.metadata;
 
+<<<<<<< HEAD
           // define namespace
+=======
+          animationStart  = module.get.animationStartEvent();
+          animationEnd    = module.get.animationEndEvent();
+          animationName   = module.get.animationName();
+          error           = settings.error;
+          namespace       = settings.namespace;
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
           eventNamespace  = '.' + settings.namespace;
           moduleNamespace = 'module-' + settings.namespace;
           instance        = $module.data(moduleNamespace) || module;
@@ -222,7 +230,11 @@ $.fn.transition = function() {
                 }
               });
             }
+<<<<<<< HEAD
             return hasDirection;
+=======
+            return false;
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
           },
           inlineDisplay: function() {
             var
@@ -264,6 +276,7 @@ $.fn.transition = function() {
               : duration
             ;
             module.verbose('Setting animation duration', duration);
+<<<<<<< HEAD
             if(duration || duration === 0) {
               $module
                 .css({
@@ -275,6 +288,17 @@ $.fn.transition = function() {
                 })
               ;
             }
+=======
+            $module
+              .css({
+                '-webkit-animation-duration': duration,
+                '-moz-animation-duration': duration,
+                '-ms-animation-duration': duration,
+                '-o-animation-duration': duration,
+                'animation-duration':  duration
+              })
+            ;
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
           },
           display: function() {
             var
@@ -487,10 +511,14 @@ $.fn.transition = function() {
           },
           duration: function(duration) {
             duration = duration || settings.duration;
+<<<<<<< HEAD
             if(duration === false) {
               duration = $module.css('animation-duration') || 0;
             }
             return (typeof duration === 'string')
+=======
+            return (typeof settings.duration === 'string')
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
               ? (duration.indexOf('ms') > -1)
                 ? parseFloat(duration)
                 : parseFloat(duration) * 1000
@@ -652,7 +680,11 @@ $.fn.transition = function() {
           },
           occurring: function(animation) {
             animation = animation || settings.animation;
+<<<<<<< HEAD
             animation = '.' + animation.replace(' ', '.');
+=======
+            animation = animation.replace(' ', '.');
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
             return ( $module.filter(animation).length > 0 );
           },
           visible: function() {
@@ -907,7 +939,11 @@ $.fn.transition.settings = {
 
   // animation duration
   animation    : 'fade',
+<<<<<<< HEAD
   duration     : false,
+=======
+  duration     : '500ms',
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
 
   // new animations will occur after previous ones
   queue       : true,

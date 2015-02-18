@@ -1,6 +1,10 @@
 {
   "name": "semantic-ui-transition",
+<<<<<<< HEAD
   "version": "1.0.0-beta",
+=======
+  "version": "1.7.2",
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
   "title": "Semantic UI - Transition",
   "description": "Single component release of transition",
   "homepage": "http://www.semantic-ui.com",
@@ -8,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Semantic-Org/UI-Transition.git"
+    "url": "https://github.com/Semantic-Org/UI-Transition.git"
   },
   "bugs": {
     "url": "https://github.com/Semantic-Org/Semantic-UI/issues"

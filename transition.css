@@ -1,5 +1,9 @@
  /*
+<<<<<<< HEAD
  * # Semantic UI - 1.9.0
+=======
+ * # Semantic UI - 1.7.2
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -327,17 +331,29 @@
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }
+<<<<<<< HEAD
 .transition[class*="fade up"].in {
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
+=======
+.horizontal.flip.transition.in {
+  -webkit-animation-name: horizontalFlipIn;
+          animation-name: horizontalFlipIn;
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
 }
 .transition[class*="fade down"].in {
   -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
 }
+<<<<<<< HEAD
 .transition[class*="fade left"].in {
   -webkit-animation-name: fadeInLeft;
           animation-name: fadeInLeft;
+=======
+.vertical.flip.transition.in {
+  -webkit-animation-name: verticalFlipIn;
+          animation-name: verticalFlipIn;
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
 }
 .transition[class*="fade right"].in {
   -webkit-animation-name: fadeInRight;
@@ -1017,6 +1033,7 @@
             transform: none;
   }
 }
+<<<<<<< HEAD
 @keyframes flyInLeft {
   0% {
     opacity: 0;
@@ -1994,6 +2011,8 @@
             transform: scale3d(1, 1, 1);
   }
 }
+=======
+>>>>>>> b6e7739fda6a13b94b0603df20330e375c55b093
 
 
 /*******************************
