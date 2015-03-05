@@ -1,3 +1,13 @@
+### Version 1.11.0 - March 3, 2015
+
+- **Transition** - Added more reasonable default durations for each animation
+- **Transition** - Added `toggle` behavior and docs for `show` and `hide`
+- **Transition** - transition now has `stop`, `stop all`, and `clear queue` for removing transitions, (undocumented method `stop`, and `start` renamed to `enable` and `disable`)
+- **Transition** - Fixes `swing out` animations not working correctly
+- **Transition** - Fixed display state other than `block` not determined when using `show` and `hide` without an animation
+- **Transition** - Fix bug in `remove looping` causing next animation to use same duration
+- **Transition** - Adds examples of `hide, `show`, `toggle`, `stop`, `stop all`, and `clear queue`
+
 ### Version 1.10.0 - February 23, 2015
 
 - **Transition** - Transitions now have `interval` to allow grouped elements to animate one by one with a delay between each animation. Grouped animations determine order based on transition direction to avoid reflows, or can manually be reversed by using <code>reverse: true</code> [See Examples](http://www.semantic-ui.com/modules/transition.html#grouped-transitions) for more details.
