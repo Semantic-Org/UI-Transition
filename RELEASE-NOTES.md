@@ -1,3 +1,21 @@
+### Version 2.0.0 - June 30, 2015
+
+- **Transition** - Fallback javascript animations have been removed from UI components like dropdown and popup to increase performance. This removes need for expensive pseudo selectors like `:visible`, `:animated` and `:hidden` and reduces filesize.
+- **Transition** - Transition code has been optimized to increase performance. 100% improvement on first animation, and 40% improvement on subsequent animations.
+- **Modal** - Modal now uses an adjusted `scale in` transition in the default theme, that should be more subtle and work better with long modal content.
+- **Site** - Fixed mixed globals `@defaultDuration` and `@transitionDuration` usage to use a single variable across all UI `@defaultDuration`, the same for `@defaultEasing` and `@transitionEasing`
+- **Transition** - Adjusting `style` or `class` during a transition, will no longer reset the change after transition completes.
+- **Transition** - Transition will no longer force visible/hidden with inline styles if `onComplete` callback sets visibility.
+- **All Modules/Transition** - Transitions no longer use `rotateZ(0deg)` to trigger GPU display of visible state. This causes issues with `transform` creating new stacking context that can disrupt `z-index`.
+- **Dropdown** - Dropdowns with `transition: none` now work correctly.
+- **Sticky** - Fix issue with sticky content scroll css transition causing element to scroll too slowly when cannot fit on screen.
+- **Transition** - Fixed bug where transition out would cause unwanted focus event in IE if element has focus
+- **Transition** - Calling an `out` animation during an `in` animation with `queue: false` now correctly calls the `complete` event of the original animation
+- **Transition** - Fixed bug where transition could sometimes not occur when an element was determined to always be hidden
+- **Rating** - Rating styles have been adjusted to use subtle transitions and tweaked color values.
+- **Transition** - Transition no longer checks for vendor prefixed `animation-name` css property. This was introduced in jQuery `1.8`
+- **Transition** - Some transition have been modified so that the `in` animation is more telegraphed than the `out` animation, which may now recede more gently.
+
 ### Version 1.11.0 - March 3, 2015
 
 - **Transition** - Added more reasonable default durations for each animation
@@ -72,7 +90,7 @@
 
 ### Version 0.16.0 - April 22, 2014
 
-- **Transition** - Fixes issue where transition hidden was sometimes overwriten by UI styles causing the element to stay visible
+- **Transition** - Fixes issue where transition hidden was sometimes overwritten by UI styles causing the element to stay visible
 
 ### Version 0.15.3 - April 04, 2014
 
@@ -116,7 +134,7 @@
 
 ### Version 0.7.0 - Oct 22, 2013
 
-- **Transition** - onShow and onHide callbacks for visibilit changing transitions
+- **Transition** - onShow and onHide callbacks for visibility changing transitions
 - **Shape** - Transition duration can now be set programatically
 
 ### Version 0.3.4 - Oct 2, 2013
