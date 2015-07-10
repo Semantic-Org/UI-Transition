@@ -1,3 +1,7 @@
+### Version 2.0.3 - July 8, 2015
+
+- **Transition** - Fixes `get current animation` erroring when `module cache` is cleared. [#2469](https://github.com/Semantic-Org/Semantic-UI/issues/2469)
+
 ### Version 2.0.0 - June 30, 2015
 
 - **Transition** - Fallback javascript animations have been removed from UI components like dropdown and popup to increase performance. This removes need for expensive pseudo selectors like `:visible`, `:animated` and `:hidden` and reduces filesize.
