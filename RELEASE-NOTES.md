@@ -1,3 +1,7 @@
+### Version 2.0.4 - July 17, 2015
+
+- **Transition** - Fixed issue where animating same element in its own `onComplete` would fail because animation had not yet called `force visible/hidden` [#2583](https://github.com/Semantic-Org/Semantic-UI/issues/2583)
+
 ### Version 2.0.3 - July 8, 2015
 
 - **Transition** - Fixes `get current animation` erroring when `module cache` is cleared. [#2469](https://github.com/Semantic-Org/Semantic-UI/issues/2469)
