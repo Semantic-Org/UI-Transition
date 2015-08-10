@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.0.7 - Transition
+ * # Semantic UI 2.0.8 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -13,7 +13,8 @@
 
 "use strict";
 
-$.fn.transition = function() {
+var _module = module;
+module.exports = function() {
   var
     $allModules     = $(this),
     moduleSelector  = $allModules.selector || '',
@@ -409,7 +410,7 @@ $.fn.transition = function() {
             }
           },
           transitionExists: function(animation, exists) {
-            $.fn.transition.exists[animation] = exists;
+            _module.exports.exists[animation] = exists;
             module.verbose('Saving existence of transition', animation, exists);
           }
         },
@@ -620,7 +621,7 @@ $.fn.transition = function() {
             return style.replace(/display.*?;/, '');
           },
           transitionExists: function(animation) {
-            return $.fn.transition.exists[animation];
+            return _module.exports.exists[animation];
           },
           animationStartEvent: function() {
             var
@@ -992,9 +993,9 @@ $.fn.transition = function() {
 };
 
 // Records if CSS transition is available
-$.fn.transition.exists = {};
+_module.exports.exists = {};
 
-module.exports.settings = {
+_module.exports.settings = {
 
   // module info
   name          : 'Transition',
