@@ -1,3 +1,7 @@
+#### Bugs
+
+- **Transition** - Transition callbacks now all have the correct `this` set. [#2758](https://github.com/Semantic-Org/Semantic-UI/issues/2758)
+
 ### Version 2.0.4 - July 17, 2015
 
 - **Transition** - Fixed issue where animating same element in its own `onComplete` would fail because animation had not yet called `force visible/hidden` [#2583](https://github.com/Semantic-Org/Semantic-UI/issues/2583)
