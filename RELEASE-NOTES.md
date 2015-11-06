@@ -1,3 +1,7 @@
+### Version 2.1.5 - Nov 1, 2015
+
+- **Transition** - Fixed bug where static transitions (those that dont animate in/out of view) would not fire `onComplete` event
+
 #### Bugs
 
 - **Transition** - Transition callbacks now all have the correct `this` set. [#2758](https://github.com/Semantic-Org/Semantic-UI/issues/2758)
