@@ -1,3 +1,7 @@
+### Version 2.1.7 - Dec 19, 2015
+
+- **Transition** - Fixes `noAnimation` error to more reasonably announce that the element is "not in the DOM" [#3040](https://github.com/Semantic-Org/Semantic-UI/issues/3040)
+
 ### Version 2.1.5 - Nov 1, 2015
 
 - **Transition** - Fixed bug where static transitions (those that dont animate in/out of view) would not fire `onComplete` event
