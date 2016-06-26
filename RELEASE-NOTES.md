@@ -1,3 +1,7 @@
+### Version 2.2.0 - June 26, 2016
+
+- **Image** - `transition hidden image` now shows correctly as `visibility: hidden;` and not `display: none`. This will allow `offset` with `visibility` and `sticky` to work more seamlessly. `hidden image` will still remain `display: none;`
+
 ### Version 2.1.7 - Dec 19, 2015
 
 - **Transition** - Fixes `noAnimation` error to more reasonably announce that the element is "not in the DOM" [#3040](https://github.com/Semantic-Org/Semantic-UI/issues/3040)
@@ -155,7 +159,7 @@
 ### Version 0.7.0 - Oct 22, 2013
 
 - **Transition** - onShow and onHide callbacks for visibility changing transitions
-- **Shape** - Transition duration can now be set programatically
+- **Shape** - Transition duration can now be set programmatically
 
 ### Version 0.3.4 - Oct 2, 2013
 
