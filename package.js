@@ -2,7 +2,7 @@
 Package.describe({
   name    : 'semantic:ui-transition',
   summary : 'Semantic UI - Transition: Single component release',
-  version : '2.2.2',
+  version : '2.2.3',
   git     : 'git://github.com/Semantic-Org/UI-Transition.git',
 });
 

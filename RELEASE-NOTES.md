@@ -1,3 +1,7 @@
+### Version 2.2.3 - August 21, 2016
+
+- **Transition** - Removed unreachable code **Thanks @basarat** [#4225](https://github.com/Semantic-Org/Semantic-UI/issues/4225)
+
 ### Version 2.2.0 - June 26, 2016
 
 - **Image** - `transition hidden image` now shows correctly as `visibility: hidden;` and not `display: none`. This will allow `offset` with `visibility` and `sticky` to work more seamlessly. `hidden image` will still remain `display: none;`
