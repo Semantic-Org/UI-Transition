@@ -1,3 +1,8 @@
+### Version 2.3.0 - Feb 19, 2018
+
+- **Transition** - Adds new `glow` transition for highlighting an element on the page, and `zoom` animation for scaling elements without opacity tween.
+- **Images / Transition** - Fixed issue where `ui images` would show nested images with `transition hidden` as block (Fixes sequential img animation demo in docs)
+
 ### Version 2.2.5 - October, 27, 2016
 
 - **Progress** - Progress now includes transitionEnd failback for progress bar animations, this will prevent labels from continuing to be updated if the `transitionEnd` css callback does not fire correctly
