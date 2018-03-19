@@ -1,4 +1,4 @@
-### Version 2.3.0 - Feb 19, 2018
+### Version 2.3.0 - Feb 20, 2018
 
 - **Transition** - Adds new `glow` transition for highlighting an element on the page, and `zoom` animation for scaling elements without opacity tween.
 - **Images / Transition** - Fixed issue where `ui images` would show nested images with `transition hidden` as block (Fixes sequential img animation demo in docs)
