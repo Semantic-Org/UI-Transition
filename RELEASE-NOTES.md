@@ -1,3 +1,7 @@
+### Version 2.3.3 - June 18, 2018
+
+- **Icon** - Several icon names have been deprecated due to incompatibility with `transition in` and `transition out` used in animations.
+
 ### Version 2.3.0 - Feb 20, 2018
 
 - **Transition** - Adds new `glow` transition for highlighting an element on the page, and `zoom` animation for scaling elements without opacity tween.
