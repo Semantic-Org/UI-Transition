@@ -1,4 +1,4 @@
-### Version 2.3.3 - June 18, 2018
+### Version 2.3.3 - July 8th, 2018
 
 - **Icon** - Several icon names have been deprecated due to incompatibility with `transition in` and `transition out` used in animations.
 
